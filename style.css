@@ -1,0 +1,146 @@
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+}
+
+.bg {
+	background-image: url("images/2.jpg");
+	height: 100%;
+	background-position: center;
+	/*background-repeat: no-repeat;*/
+	background-size: cover;
+}
+
+/*NAV TABS*/
+.nav-tabs {
+	border-bottom: none;
+}
+
+/*HEART*/
+.heart {
+	background-color: red;
+	display: inline-block;
+	height: 25px;
+	margin: 0 10px;
+	position: relative;
+	top: 0;
+	transform: rotate(-45deg);
+	fill: red;
+	width: 25px;
+	animation: pulse 1s ease infinite;
+}
+
+.heart:before,
+.heart:after {
+	content: "";
+	background-color: red;
+	border-radius: 50%;
+	height: 25px;
+	position: absolute;
+	width: 25px;
+}
+
+.heart:before {
+	top: -15px;
+	left: 0;
+}
+
+.heart:after {
+	left: 15px;
+	top: 0;
+}
+
+@keyframes pulse {
+	0% { transform: scale(1) rotate(-45deg);}
+	50% { transform: scale(1.3) rotate(-45deg);}
+	100% { transform: scale(1) rotate(-45deg);}
+}
+/*HEART*/
+
+.wrapper {
+	background-color: aqua;
+	min-height: 100%;
+}
+
+.main-container {
+	width: 75%;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.image-container {
+	position: relative;
+	width: 100%;
+}
+
+.image {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+
+.message-container {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+.image-container:hover .image {
+	opacity: 0.3;
+}
+
+.image-container:hover .message-container {
+	opacity: 1;
+}
+
+.message {
+	background-color: #4CAF50;
+	color: white;
+	font-size: 16px;
+	padding: 16px 32px;
+}
+
+.content {
+	border: 3px solid white;
+	border-radius: 10px;
+	border-top-left-radius: 0;
+}
+
+.item {
+	height: 150px;
+	width: 100%;
+	max-width: 100%;
+}
+
+.item img {
+	max-width: inherit;
+	height: 150px;
+	max-height: 150px;
+	border: 1px inset #e3e3e3;
+	border-radius: 10px;
+}
+
+/*.slide-show {*/
+	/*border: 3px solid white;*/
+	/*border-radius: 10px;*/
+/*}*/
+
+/*memories tab*/
+
+#memories .card {
+	width: 15rem;
+	margin-bottom: 2rem;
+}
+
+.increase-line-height {line-height: 1.5em;}
+.c-mxw-350 {max-width: 350px;}
